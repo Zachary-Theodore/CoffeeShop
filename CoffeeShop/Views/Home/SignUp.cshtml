@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    string emailVal = @"^[a-zA-Z0-9]{1,30}@[a-zA-Z0-9]{1,10}.[a-z]{2,3}$";
+}
+
+<h2>SignUp</h2>
+<form action="/Home/AddUser">
+    <label class="control-label">First Name</label>
+    <input type="text" name="FirstName" class="form-control"required pattern="^[A-Za-z]{1,30}$"/>
+
+    <label class="control-label">Last Name</label>
+    <input type="text" name="LastName" class="form-control"required pattern="^[A-Za-z]{1,30}$" />
+
+    <label class="control-label">Email Address</label>
+    <input type="email" name="Email" class="form-control"required pattern= "@emailVal" />
+
+    <label class="control-label">Phone Number</label>
+    <input type="number" name="PhoneNumber" class="form-control" required pattern="^\d{3}-\d{3}-\d{4}|\d{10}|\d{3} \d{3} \d{4}|\d{10}$"/>
+
+    <label class="control-label">Password</label>
+    <input type="password" name="Password" class="form-control" required pattern="^[a-zA-Z0-9]{8,16}$"/>
+
+
+
+
+
+    <input type="Submit" value="Sign Up!" class="btn-default" />
+</form>
+
